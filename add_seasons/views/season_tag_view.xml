@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_season_tag_form" model="ir.ui.view">
+        <field name="name">view.season_tag.form</field>
+        <field name="model">season.tag</field>
+        <field name="arch" type="xml">
+            <form string="Season Tags">
+                <sheet>
+                    <div class="oe_title">
+                        <div class="oe_edit_only">
+                            <label for="name"/>
+                        </div>
+                        <h1>
+                            <field name="name"/>
+                        </h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="color" required="True" widget="color_picker" />
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_season_tag_tree" model="ir.ui.view">
+        <field name="name">view.season_tag.form</field>
+        <field name="model">season.tag</field>
+        <field name="arch" type="xml">
+            <tree string="Season Tags">
+                <field name="name" />
+                <field name="color" required="True" widget="color_picker" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="season_tag_action" model="ir.actions.act_window">
+        <field name="name">Season Tags</field>
+        <field name="res_model">season.tag</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                Click to create a new Season Tags.
+            </p>
+        </field>
+    </record>
+
+
+    <record id="new_season_tag_action" model="ir.actions.act_window">
+        <field name="name">New Season Tags</field>
+        <field name="res_model">season.tag</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+
+
+    <menuitem id="season_tag_menu" parent="purchase.menu_purchase_root"
+        action="season_tag_action" sequence="20"/>
+
+
+
+</odoo> 

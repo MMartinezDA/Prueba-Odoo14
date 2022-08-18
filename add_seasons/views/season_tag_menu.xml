@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <menuitem id="season_menu" name="Season Tag" sequence="10"/>
+    <menuitem id="season_tag_menu" name="Tags" sequence="10" parent="season_menu"/>
+    <menuitem id="season_tag_config_menu" name="Config" sequence="10" parent="season_menu"/>
+
+
+</odoo> 
