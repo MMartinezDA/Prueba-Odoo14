@@ -1,0 +1,4 @@
+[submodule "MMartinezDA/Prueba-Odoo14"]
+	path = MMartinezDA/Prueba-Odoo14
+	url = git@github.com:MMartinezDA/Prueba-Odoo14.git
+	branch = Prueba-Odoo14
